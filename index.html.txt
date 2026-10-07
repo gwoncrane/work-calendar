@@ -1,0 +1,39 @@
+!DOCTYPE html
+html lang=ko
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    title나만의 6일 로테이션 근무표title
+    link rel=stylesheet href=style.css
+head
+body
+    div class=container
+        header
+            h1✨ 6일 로테이션 근무표h1
+            p id=today-status오늘의 근무를 불러오는 중...p
+        header
+
+        section class=setting-box
+            label for=base-date기준일(첫 주간 시작일) label
+            input type=date id=base-date
+            button id=save-btn저장button
+        section
+
+        main
+            div class=calendar-header
+                button id=prev-month&lt;button
+                h2 id=month-title2026년 10월h2
+                button id=next-month&gt;button
+            div
+            
+            div class=weekdays
+                div일divdiv월divdiv화divdiv수divdiv목divdiv금divdiv토div
+            div
+            
+            div id=calendar-grid class=calendar-griddiv
+        main
+    div
+
+    script src=script.jsscript
+body
+html
