@@ -29,6 +29,7 @@ function renderCalendar() {
     const lastDay = new Date(year, month + 1, 0).getDate();
     
     const baseDate = new Date(baseDateStr);
+    const today = new Date();
 
     for (let i = 0; i < firstDayIndex; i++) {
         const emptyCell = document.createElement("div");
@@ -41,6 +42,15 @@ function renderCalendar() {
         
         const thisDate = new Date(year, month, day);
         const shift = getShift(thisDate, baseDate);
+        
+        // 오늘 날짜인지 확인하여 today 클래스 추가
+        if (
+            thisDate.getFullYear() === today.getFullYear() &&
+            thisDate.getMonth() === today.getMonth() &&
+            thisDate.getDate() === today.getDate()
+        ) {
+            cell.classList.add("today");
+        }
         
         cell.innerHTML = `
             <span class="date-num">${day}</span>
@@ -56,7 +66,13 @@ function renderCalendar() {
 function updateTodayStatus(baseDate) {
     const today = new Date();
     const todayShift = getShift(today, baseDate);
-    document.getElementById("today-status").textContent = `오늘 (${today.getMonth()+1}/${today.getDate()}) 근무는 ⭐${todayShift}⭐ 입니다!`;
+    const statusBox = document.getElementById("today-status");
+    
+    statusBox.textContent = `오늘 (${today.getMonth()+1}/${today.getDate()}) 근무는 ⭐${todayShift}⭐ 입니다!`;
+    
+    // 근무 상태에 따라 상단 박스 클래스 변경 (주간/야간/휴무)
+    statusBox.className = "";
+    statusBox.classList.add(todayShift);
 }
 
 document.getElementById("prev-month").addEventListener("click", () => {
