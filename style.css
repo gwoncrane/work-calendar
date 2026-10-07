@@ -6,7 +6,6 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    /* 전체 배경을 아주 연한 연두색 계열로 변경 */
     background-color: #f2f8f4;
     color: #333;
     display: flex;
@@ -34,14 +33,29 @@ header h1 {
     color: #111;
 }
 
+/* 상단 근무 상태 박스 기본 스타일 */
 #today-status {
     font-size: 1.4rem;
     font-weight: 600;
-    /* 상단 안내 박스 배경과 글씨를 싱그러운 연두/초록 계열로 변경 */
-    color: #2b7a3d;
-    background: #e8f5e9;
     padding: 14px;
     border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+/* 근무별 상단 박스 색상 동적 적용 */
+#today-status.주간 {
+    background: #fff3e0;
+    color: #d9480f;
+}
+
+#today-status.야간 {
+    background: #e8f5e9;
+    color: #2b8a3e;
+}
+
+#today-status.휴무 {
+    background: #e7f5ff;
+    color: #1864ab;
 }
 
 .calendar-card {
@@ -98,6 +112,12 @@ header h1 {
     justify-content: space-between;
     padding: 10px;
     font-size: 1.1rem;
+}
+
+/* 오늘 날짜 강조 스타일 */
+.day-cell.today {
+    border: 2px solid #4a7c59;
+    background-color: #f4faf6;
 }
 
 .day-cell .date-num {
