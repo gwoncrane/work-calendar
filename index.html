@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도롱이 근무표</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍀도롱이 근무표🍀</h1>
+            <p id="today-status">오늘의 근무를 불러오는 중...</p>
+        </header>
+
+        <main class="calendar-card">
+            <div class="calendar-header">
+                <button id="prev-month">&lt;</button>
+                <h2 id="month-title">2026년 10월</h2>
+                <button id="next-month">&gt;</button>
+            </div>
+            
+            <div class="weekdays">
+                <div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div>
+            </div>
+            
+            <div id="calendar-grid" class="calendar-grid"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
