@@ -27,20 +27,21 @@ header {
     margin-bottom: 16px;
 }
 
+/* 상단 타이틀: 크기 복구 및 검정색 적용 */
 header h1 {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-    color: #88455e;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    color: #111111;
 }
 
-/* 상단 오늘 근무 안내 박스 */
+/* 상단 오늘 근무 안내 박스: 폰트 크기 복구 및 검정색 적용 */
 #today-status {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    padding: 10px;
+    padding: 14px;
     border-radius: 12px;
     background: #ffeef3;
-    color: #b83265;
+    color: #111111;
 }
 
 .calendar-card {
@@ -118,7 +119,7 @@ header h1 {
     font-weight: bold;
 }
 
-/* 변경된 근무별 배지 색상: 주간(노랑), 야간(초록), 휴무(빨강) */
+/* 근무별 배지 색상: 주간(노랑), 야간(초록), 휴무(빨강) */
 .badge.주간 { 
     background: #fef9c3; 
     color: #ca8a04; 
