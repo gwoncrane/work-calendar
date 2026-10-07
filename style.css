@@ -13,7 +13,7 @@ body {
     padding: 20px;
 }
 
-/* 전체 컨테이너 사이즈를 150% 수준으로 큼직하게 확대 */
+/* PC에서는 큼직하게, 폰 화면(480px 이하)에서는 화면에 꽉 차게 자동 조절 */
 .container {
     width: 100%;
     max-width: 680px; 
@@ -28,14 +28,13 @@ header {
     margin-bottom: 24px;
 }
 
-/* 상단 타이틀: 원래 크기와 색상으로 복구 */
 header h1 {
     font-size: 2.2rem;
     margin-bottom: 14px;
     color: #88455e;
 }
 
-/* 상단 오늘 근무 안내 박스: 원래 크기와 색상으로 복구 */
+/* 상단 오늘 근무 안내 박스 */
 #today-status {
     font-size: 1.4rem;
     font-weight: 600;
@@ -134,4 +133,43 @@ header h1 {
 .badge.휴무 { 
     background: #fee2e2; 
     color: #dc2626; 
+}
+
+/* ✨ 스마트폰 화면(너비 700px 이하)에서 달력이 튀어나가지 않도록 자동 축소해 주는 마법의 코드 */
+@media screen and (max-width: 700px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 16px;
+        border-radius: 20px;
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+    #today-status {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+    .calendar-card {
+        padding: 10px;
+    }
+    .calendar-header h2 {
+        font-size: 1.2rem;
+    }
+    .weekdays {
+        font-size: 0.9rem;
+    }
+    .calendar-grid {
+        gap: 4px;
+    }
+    .day-cell {
+        padding: 6px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+    .badge {
+        font-size: 0.7rem;
+        padding: 2px 0;
+    }
 }
