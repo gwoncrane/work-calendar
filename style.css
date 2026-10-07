@@ -10,10 +10,10 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 16px;
 }
 
-/* 기본 PC 기준 크기 */
+/* PC 및 기본 컨테이너 설정 */
 .container {
     width: 100%;
     max-width: 680px; 
@@ -135,42 +135,58 @@ header h1 {
     color: #dc2626; 
 }
 
-/* ✨ 스마트폰 화면 대응: 카드 안쪽 여백과 칸 간격을 최적화하여 삐져나감 원천 차단 */
-@media screen and (max-width: 700px) {
+/* ✨ 스마트폰 화면(768px 이하)에서 무조건 화면 폭에 딱 맞게 강제 고정 */
+@media screen and (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 8px;
     }
     .container {
-        padding: 16px;
-        border-radius: 20px;
+        max-width: 100%;
+        padding: 12px;
+        border-radius: 16px;
+        box-shadow: none;
+    }
+    header {
+        margin-bottom: 14px;
     }
     header h1 {
-        font-size: 1.7rem;
-    }
-    #today-status {
-        font-size: 1.15rem;
-        padding: 12px;
-    }
-    .calendar-card {
-        padding: 10px; /* 카드가 좁아져도 튀어나가지 않도록 여백 축소 */
-    }
-    .calendar-header h2 {
-        font-size: 1.3rem;
-    }
-    .weekdays {
-        font-size: 0.95rem;
+        font-size: 1.4rem;
         margin-bottom: 8px;
     }
+    #today-status {
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .calendar-card {
+        padding: 8px;
+        border-radius: 12px;
+    }
+    .calendar-header {
+        margin-bottom: 10px;
+    }
+    .calendar-header h2 {
+        font-size: 1.1rem;
+    }
+    .calendar-header button {
+        font-size: 1.2rem;
+        padding: 2px 6px;
+    }
+    .weekdays {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
     .calendar-grid {
-        gap: 4px; /* 칸 사이 간격을 줄여서 꽉 차게 수납 */
+        gap: 3px;
     }
     .day-cell {
-        padding: 6px;
-        font-size: 0.9rem;
-        border-radius: 8px;
+        padding: 4px;
+        border-radius: 6px;
+        font-size: 0.8rem;
     }
     .badge {
-        font-size: 0.75rem;
-        padding: 2px 0;
+        font-size: 0.65rem;
+        padding: 1px 2px;
+        border-radius: 4px;
     }
 }
