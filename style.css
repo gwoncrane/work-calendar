@@ -10,65 +10,66 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-    padding: 12px;
+    padding: 20px;
 }
 
+/* 전체 컨테이너 사이즈를 150% 수준으로 큼직하게 확대 */
 .container {
     width: 100%;
-    max-width: 420px;
+    max-width: 680px; 
     background: #ffffff;
-    padding: 16px;
-    border-radius: 24px;
+    padding: 32px;
+    border-radius: 28px;
     box-shadow: 0 12px 36px rgba(229, 115, 155, 0.08);
 }
 
 header {
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
-/* 상단 타이틀: 크기 복구 및 검정색 적용 */
+/* 상단 타이틀: 원래 크기와 색상으로 복구 */
 header h1 {
     font-size: 2.2rem;
-    margin-bottom: 12px;
-    color: #111111;
+    margin-bottom: 14px;
+    color: #88455e;
 }
 
-/* 상단 오늘 근무 안내 박스: 폰트 크기 복구 및 검정색 적용 */
+/* 상단 오늘 근무 안내 박스: 원래 크기와 색상으로 복구 */
 #today-status {
     font-size: 1.4rem;
     font-weight: 600;
     padding: 14px;
-    border-radius: 12px;
+    border-radius: 14px;
     background: #ffeef3;
-    color: #111111;
+    color: #b83265;
 }
 
 .calendar-card {
     background: #fff9fb;
     border: 1px solid #fce4ec;
-    padding: 10px;
-    border-radius: 16px;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
 .calendar-header h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #9b4d6c;
 }
 
 .calendar-header button {
     background: none;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     cursor: pointer;
-    padding: 4px 8px;
+    padding: 4px 12px;
     color: #d87093;
 }
 
@@ -77,27 +78,27 @@ header h1 {
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #8c6878;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 3px;
+    gap: 8px;
 }
 
 .day-cell {
     aspect-ratio: 1;
     background: #ffffff;
     border: 1px solid #f8e1eb;
-    border-radius: 8px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 4px;
-    font-size: 0.85rem;
+    padding: 10px;
+    font-size: 1.1rem;
 }
 
 /* 오늘 날짜 강조 */
@@ -112,9 +113,9 @@ header h1 {
 }
 
 .badge {
-    font-size: 0.7rem; 
-    padding: 2px 0;
-    border-radius: 4px;
+    font-size: 0.9rem; 
+    padding: 4px 6px;
+    border-radius: 6px;
     text-align: center;
     font-weight: bold;
 }
