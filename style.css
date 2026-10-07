@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 420px; /* 모바일에 최적화된 컴팩트한 너비 */
+    max-width: 420px;
     background: #ffffff;
     padding: 16px;
     border-radius: 24px;
@@ -46,7 +46,7 @@ header h1 {
 .calendar-card {
     background: #fff9fb;
     border: 1px solid #fce4ec;
-    padding: 10px; /* 안쪽 여백을 줄여서 달력이 밖으로 나가지 않도록 방지 */
+    padding: 10px;
     border-radius: 16px;
 }
 
@@ -84,7 +84,7 @@ header h1 {
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 3px; /* 칸 사이 간격을 더 좁혀서 확실하게 수납 */
+    gap: 3px;
 }
 
 .day-cell {
@@ -118,18 +118,18 @@ header h1 {
     font-weight: bold;
 }
 
-/* 근무별 배지 색상: 주간(빨강), 야간(노랑), 휴무(초록) */
+/* 변경된 근무별 배지 색상: 주간(노랑), 야간(초록), 휴무(빨강) */
 .badge.주간 { 
-    background: #fee2e2; 
-    color: #dc2626; 
-}
-
-.badge.야간 { 
     background: #fef9c3; 
     color: #ca8a04; 
 }
 
-.badge.휴무 { 
+.badge.야간 { 
     background: #dcfce7; 
     color: #16a34a; 
+}
+
+.badge.휴무 { 
+    background: #fee2e2; 
+    color: #dc2626; 
 }
