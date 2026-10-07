@@ -6,7 +6,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f2f8f4;
+    /* 전체 배경: 아주 연한 하늘색 */
+    background-color: #f0f7ff;
     color: #333;
     display: flex;
     justify-content: center;
@@ -19,7 +20,7 @@ body {
     background: #ffffff;
     padding: 36px;
     border-radius: 28px;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 36px rgba(0, 102, 255, 0.06);
 }
 
 header {
@@ -30,37 +31,22 @@ header {
 header h1 {
     font-size: 2.2rem;
     margin-bottom: 14px;
-    color: #111;
+    color: #1a365d;
 }
 
-/* 상단 근무 상태 박스 기본 스타일 */
+/* 상단 오늘 근무 안내 박스: 파란색 테마 고정 */
 #today-status {
     font-size: 1.4rem;
     font-weight: 600;
     padding: 14px;
     border-radius: 14px;
-    transition: all 0.3s ease;
-}
-
-/* 근무별 상단 박스 색상 동적 적용 */
-#today-status.주간 {
-    background: #fff3e0;
-    color: #d9480f;
-}
-
-#today-status.야간 {
-    background: #e8f5e9;
-    color: #2b8a3e;
-}
-
-#today-status.휴무 {
-    background: #e7f5ff;
-    color: #1864ab;
+    background: #eef4ff;
+    color: #1d4ed8;
 }
 
 .calendar-card {
-    background: #f8fbf9;
-    border: 1px solid #e2efe6;
+    background: #f8fbff;
+    border: 1px solid #dbeafe;
     padding: 24px;
     border-radius: 20px;
 }
@@ -74,7 +60,7 @@ header h1 {
 
 .calendar-header h2 {
     font-size: 1.5rem;
-    color: #2c3e35;
+    color: #1e3a8a;
 }
 
 .calendar-header button {
@@ -83,7 +69,7 @@ header h1 {
     font-size: 1.6rem;
     cursor: pointer;
     padding: 4px 14px;
-    color: #4a7c59;
+    color: #3b82f6;
 }
 
 .weekdays {
@@ -92,7 +78,7 @@ header h1 {
     text-align: center;
     font-weight: bold;
     font-size: 1.1rem;
-    color: #557963;
+    color: #475569;
     margin-bottom: 12px;
 }
 
@@ -105,7 +91,7 @@ header h1 {
 .day-cell {
     aspect-ratio: 1;
     background: #ffffff;
-    border: 1px solid #e8f0ec;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -114,15 +100,15 @@ header h1 {
     font-size: 1.1rem;
 }
 
-/* 오늘 날짜 강조 스타일 */
+/* 오늘 날짜 강조: 푸른빛 테두리 */
 .day-cell.today {
-    border: 2px solid #4a7c59;
-    background-color: #f4faf6;
+    border: 2px solid #3b82f6;
+    background-color: #f0f7ff;
 }
 
 .day-cell .date-num {
     font-weight: 600;
-    color: #333;
+    color: #334155;
 }
 
 .badge {
@@ -133,6 +119,18 @@ header h1 {
     font-weight: bold;
 }
 
-.badge.주간 { background: #ffe8d6; color: #d9480f; }
-.badge.야간 { background: #ebfbee; color: #2b8a3e; }
-.badge.휴무 { background: #e7f5ff; color: #1864ab; }
+/* 요청하신 근무별 배지 색상: 주간(빨강), 야간(노랑), 휴무(초록) */
+.badge.주간 { 
+    background: #fee2e2; 
+    color: #dc2626; 
+}
+
+.badge.야간 { 
+    background: #fef9c3; 
+    color: #ca8a04; 
+}
+
+.badge.휴무 { 
+    background: #dcfce7; 
+    color: #16a34a; 
+}
